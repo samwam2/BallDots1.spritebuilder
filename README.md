@@ -36,12 +36,14 @@ Have the dots / grid setup in different ways.
 ### Week 4 (7/13 - 7/17/2015) - _finishing a playable build_
 * Make a 2D grid, where you can specify the number of rows and columns
   * makeGrid(x: numberOfRows, y: numberOfColumns)
-* Design and find assets 
 * Put in background
+* Add diffrent colors 
+* Add touch controlls 
 
 ### Week 5 (7/20 - 7/24/2015)
 * Add a ball to roll down
 * Add graphics for everything 
+
 ### Week 6 (7/27 - 8=7/31/2015) - _finishing core gameplay_
 * Make a main menu 
 * Make a level  screen 
