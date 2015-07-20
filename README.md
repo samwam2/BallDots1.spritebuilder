@@ -42,7 +42,9 @@ Have the dots / grid setup in different ways.
 
 ### Week 5 (7/20 - 7/24/2015)
 * Add a ball to roll down
-* Add graphics for everything 
+* Make squares desiper on touch
+* Make squares into dots
+* Set minimum number of dots left
 
 ### Week 6 (7/27 - 8=7/31/2015) - _finishing core gameplay_
 * Make a main menu 
