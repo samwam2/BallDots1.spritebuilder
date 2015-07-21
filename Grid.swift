@@ -8,17 +8,24 @@
 
 import Foundation
 
-class Grid {
+class Grid:CCNode {
+    //(JS) Made this a ccnode
     //all vars here
 
 
     var grid: [[CGPoint]] = [[CGPoint]]()
-    let columns: Int
-    let rows: Int
-    let spacing: Int
+    var columns: Int = 0
+    var rows: Int = 0
+    var spacing: Int = 0
+    // (JS) changed to vars
+    
+    override init() {
+        super.init()
+    }
+
     
     
-    init(columns: Int, rows: Int, spacing: Int) {
+    func setAll(columns: Int, rows: Int, spacing: Int) -> [[CGPoint]] {
         self.columns = columns
         self.rows = rows
         self.spacing = spacing
@@ -30,6 +37,9 @@ class Grid {
                 grid[row].append(point)
             }
         }
+        
+        return grid
+
     }
     
     
