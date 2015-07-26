@@ -7,54 +7,62 @@
 //
 
 import Foundation
-class GamePlay: CCScene {
+class GamePlay: CCScene, CCPhysicsCollisionDelegate {
     //all vars here
-    weak var dot: CCNodeColor!
+    weak var dot: CCNode!
     weak var ball: CCNode!
-
-        //weak var Dot:CCNodeColor!
-    
+    weak var Win: CCNodeColor!
+    weak var gamePhysicsNode: CCPhysicsNode!
     var aGridArray:[[CGPoint]]?
     
     
-    
     //all lets here
+    
 
     func didLoadFromCCB() {
         //var grid = Grid(columns: 10, rows: 10, spacing: 10)
 //        ball.physicsBody
-    
+        
         var grid = CCBReader.load("Grid") as! Grid
         aGridArray = grid.setAll(10, rows: 10, spacing: 50)
         for pointArray in aGridArray! {
             for point in pointArray {
                 var temporaryDot = CCBReader.load("Dot")
                 temporaryDot.position = point
-                self.addChild(temporaryDot)
+                gamePhysicsNode.addChild(temporaryDot)
                 //println("added dot at position \(temporaryDot.position)")
+                
             }
         }
         //CCBReader.load("Dot")
         userInteractionEnabled = true
+        //gamePhysicsNode.debugDraw = true
+    
+        gamePhysicsNode.collisionDelegate = self
+        
     }
 
-    
-    /*
-    override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        var touchLocation = dot
-        for array in aGridArray! {
-            for dot in array {
-                var temporaryRect = CGRect(x: dot.x, y: dot.y, width: 7.5, height: 7.5) //7.5
-                if temporaryRect.contains(touch.locationInWorld()) {
-                    println("worked")
-                    println("touch location \(temporaryRect)")
-                    
-                    
-                }
-            }
-        }
+    func retry() {
+        let gameplayScene = CCBReader.loadAsScene("GamePlay")
+        CCDirector.sharedDirector().presentScene(gameplayScene)
+        
     }
-*/
+
+    func detectTouch(touch: CCTouch) {
+        var currentTouch = convertToNodeSpace(touch.locationInWorld())
+        
+//        for dotGlobal in dots {
+//            
+//            var dots = convertToNodeSpace(dotGlobal.position)
+//            
+//        }
+        
+    }
+    
+    func Back() {
+        let backscene = CCBReader.loadAsScene("MainScene")
+        CCDirector.sharedDirector().presentScene(backscene)
+    }
     
     
     //last closing bracket all new code ^

@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>9</integer>
+	<integer>3</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -41,7 +41,7 @@
 		<array>
 			<dict>
 				<key>UUID</key>
-				<integer>8</integer>
+				<integer>2</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
@@ -49,9 +49,9 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Billiard_Balls_01_Red_64x64</string>
+				<string>Billiard_Balls_01_Black_64x64</string>
 				<key>memberVarAssignmentName</key>
-				<string>dot</string>
+				<string>BlackDot</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -62,7 +62,7 @@
 						<key>type</key>
 						<string>StringSimple</string>
 						<key>value</key>
-						<string>dot</string>
+						<string></string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -98,7 +98,7 @@
 						<array>
 							<real>2</real>
 							<real>2</real>
-							<false/>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Dots/Billiard_Balls_01_Red_64x64.png</string>
+							<string>Dots/Billiard_Balls_01_Black_64x64.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -149,7 +149,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>Dot</string>
+		<string>blackDot</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -171,7 +171,7 @@
 			<key>collisionType</key>
 			<string></string>
 			<key>cornerRadius</key>
-			<real>16.664066314697266</real>
+			<real>16</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -183,8 +183,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>15.500238418579102</real>
-					<real>15.982723236083984</real>
+					<real>15</real>
+					<real>15</real>
 				</array>
 			</array>
 			<key>polygons</key>
@@ -198,7 +198,7 @@
 				<key>type</key>
 				<string>StringSimple</string>
 				<key>value</key>
-				<string></string>
+				<string>blackDot</string>
 			</dict>
 			<dict>
 				<key>name</key>

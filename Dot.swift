@@ -9,29 +9,32 @@
 import UIKit
 import Foundation
 
-
 class Dot: CCNode {
-    weak var dot: CCNodeColor!
+    weak var dot: CCNode!
     var location = CGPoint(x: CGFloat(), y: CGFloat())
-   
+    weak var gamePhysicsNode: CCPhysicsNode!
+    weak var counter: CCLabelTTF!
+    var dotDeletedCounter: Int = 10 {
+        didSet {
+           //counter.string = "\(dotDeletedCounter)"
+            println("\(dotDeletedCounter)")
+        }
+    }
+    
     func didLoadFromCCB() {
         self.userInteractionEnabled = true
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        println("regular touch")
+        //println("regular touch")
         //var touchLocation = touch.locationInNode(self)
         removeFromParentAndCleanup(true)
-       
-        println("removed at \(removeFromParentAndCleanup(true))")
-//        if self.dot > 5 {
-//            removeFromParentAndCleanup(false)
-//        }
-    }
-    override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        println("touched moved")
+        
+      
         
     }
+  
     
    
-}
+    }
+

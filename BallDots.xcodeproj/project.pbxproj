@@ -44,9 +44,16 @@
 		7A97911719E631C6001FFC4D /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A97910419E62E40001FFC4D /* libcocos2d-mac.a */; };
 		7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9790FE19E62E40001FFC4D /* libcocos2d.a */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
+		8F1E81DE1B6561CC0082A1D2 /* levelTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1E81DD1B6561CC0082A1D2 /* levelTwo.swift */; };
 		8F25B1741B570DD300AFD208 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25B1731B570DD300AFD208 /* Grid.swift */; };
 		8F25B1761B58578500AFD208 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25B1751B58578500AFD208 /* Dot.swift */; };
 		8F6DD6FD1B55D6E900D9BDBD /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6DD6FC1B55D6E900D9BDBD /* GamePlay.swift */; };
+		8F7AED0F1B6048D5008A80F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7AED0E1B6048D5008A80F6 /* Images.xcassets */; };
+		8F7AED191B61AA2D008A80F6 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AED181B61AA2C008A80F6 /* LevelScene.swift */; };
+		8FD85A431B60159C00CE5F66 /* AboutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD85A421B60159C00CE5F66 /* AboutGame.swift */; };
+		8FF08ED31B62BADB00DDB0C5 /* levelOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF08ED21B62BADB00DDB0C5 /* levelOne.swift */; };
+		8FF08EDC1B62E80900DDB0C5 /* winScreenB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF08EDB1B62E80900DDB0C5 /* winScreenB.swift */; };
+		8FF08EDE1B62F06E00DDB0C5 /* blackDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF08EDD1B62F06E00DDB0C5 /* blackDot.swift */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
 		927F61A9196C771E000F43EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		927F61AA196C771E000F43EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
@@ -175,9 +182,16 @@
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8F1E81DD1B6561CC0082A1D2 /* levelTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelTwo.swift; sourceTree = "<group>"; };
 		8F25B1731B570DD300AFD208 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		8F25B1751B58578500AFD208 /* Dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		8F6DD6FC1B55D6E900D9BDBD /* GamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
+		8F7AED0E1B6048D5008A80F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Source/libs/cocos2d-iphone/external/SSZipArchive/Images.xcassets"; sourceTree = "<group>"; };
+		8F7AED181B61AA2C008A80F6 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
+		8FD85A421B60159C00CE5F66 /* AboutGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutGame.swift; sourceTree = "<group>"; };
+		8FF08ED21B62BADB00DDB0C5 /* levelOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelOne.swift; sourceTree = "<group>"; };
+		8FF08EDB1B62E80900DDB0C5 /* winScreenB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winScreenB.swift; sourceTree = "<group>"; };
+		8FF08EDD1B62F06E00DDB0C5 /* blackDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blackDot.swift; sourceTree = "<group>"; };
 		927F61BF196C771E000F43EF /* BallDots Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BallDots Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -429,6 +443,24 @@
 			name = Mac;
 			sourceTree = "<group>";
 		};
+		8FF08ED41B62C4BE00DDB0C5 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				8FF08ED21B62BADB00DDB0C5 /* levelOne.swift */,
+				8F1E81DD1B6561CC0082A1D2 /* levelTwo.swift */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		8FF08EDF1B62F07600DDB0C5 /* All Dot classes */ = {
+			isa = PBXGroup;
+			children = (
+				8FF08EDD1B62F06E00DDB0C5 /* blackDot.swift */,
+				8F25B1751B58578500AFD208 /* Dot.swift */,
+			);
+			name = "All Dot classes";
+			sourceTree = "<group>";
+		};
 		9222E2B918734FF800A246C7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,9 +474,14 @@
 			children = (
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
+				8F7AED181B61AA2C008A80F6 /* LevelScene.swift */,
+				8FD85A421B60159C00CE5F66 /* AboutGame.swift */,
+				8FF08EDB1B62E80900DDB0C5 /* winScreenB.swift */,
 				8F6DD6FC1B55D6E900D9BDBD /* GamePlay.swift */,
+				8FF08ED41B62C4BE00DDB0C5 /* Levels */,
 				8F25B1731B570DD300AFD208 /* Grid.swift */,
-				8F25B1751B58578500AFD208 /* Dot.swift */,
+				8FF08EDF1B62F07600DDB0C5 /* All Dot classes */,
+				8F7AED0E1B6048D5008A80F6 /* Images.xcassets */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 			);
 			name = Source;
@@ -611,7 +648,7 @@
 		B77F1B2617B978D7009739AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					7A4035FE19DDEE84007B6E8F = {
@@ -735,6 +772,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
+				8F7AED0F1B6048D5008A80F6 /* Images.xcassets in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
@@ -823,11 +861,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73789871807631A0076A88C /* main.m in Sources */,
+				8F7AED191B61AA2D008A80F6 /* LevelScene.swift in Sources */,
 				8F6DD6FD1B55D6E900D9BDBD /* GamePlay.swift in Sources */,
+				8FD85A431B60159C00CE5F66 /* AboutGame.swift in Sources */,
+				8FF08EDC1B62E80900DDB0C5 /* winScreenB.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				8F25B1741B570DD300AFD208 /* Grid.swift in Sources */,
+				8F1E81DE1B6561CC0082A1D2 /* levelTwo.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				8FF08ED31B62BADB00DDB0C5 /* levelOne.swift in Sources */,
 				8F25B1761B58578500AFD208 /* Dot.swift in Sources */,
+				8FF08EDE1B62F06E00DDB0C5 /* blackDot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1054,6 +1098,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -1087,6 +1132,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					"NS_BLOCK_ASSERTIONS=1",
@@ -1108,6 +1154,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1124,7 +1171,7 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1132,7 +1179,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = BallDots;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "12ef6992-cad1-4295-9d6b-d71c1c86ada1";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1144,6 +1191,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1159,14 +1207,14 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = BallDots;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "12ef6992-cad1-4295-9d6b-d71c1c86ada1";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

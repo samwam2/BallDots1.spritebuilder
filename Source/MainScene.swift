@@ -14,6 +14,23 @@ class MainScene: CCNode {
     //all lets here
     
     
+    func didLoadFromCCB() {
+        userInteractionEnabled = true
+    }
+    func StartGame() {
+        let gameplayScene = CCBReader.loadAsScene("GamePlay")
+        CCDirector.sharedDirector().presentScene(gameplayScene)
+    }
+    
+    func AboutTheGame() {
+        let aboutthegameScene = CCBReader.loadAsScene("AboutGame")
+        CCDirector.sharedDirector().presentScene(aboutthegameScene)
+    }
+    
+    func LevelMenu() {
+        let levelmenuScene = CCBReader.loadAsScene("LevelScene")
+        CCDirector.sharedDirector().presentScene(levelmenuScene)
+    }
     
     //last closing bracket all new code ^
 }
