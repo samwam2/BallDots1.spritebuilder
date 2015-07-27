@@ -1,14 +1,14 @@
 //
-//  levelTwo.swift
+//  levelFour.swift
 //  BallDots
 //
-//  Created by Sam Showalter on 7/26/15.
+//  Created by Sam Showalter on 7/27/15.
 //  Copyright (c) 2015 Apportable. All rights reserved.
 //
 
 import Foundation
 
-class levelTwo: CCNode, CCPhysicsCollisionDelegate {
+class levelFour: CCNode {
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var Ball: CCNode!
     

@@ -20,16 +20,16 @@ class LevelScene: CCNode {
         CCDirector.sharedDirector().presentScene(level1Scene)
     }
     func Level2() {
-        let level1Scene = CCBReader.loadAsScene("Levels/levelTWo")
-        CCDirector.sharedDirector().presentScene(level1Scene)
+        let level2Scene = CCBReader.loadAsScene("Levels/levelTwo")
+        CCDirector.sharedDirector().presentScene(level2Scene)
     }
     func Level3() {
-        let level1Scene = CCBReader.loadAsScene("Levels/levelOne")
-        CCDirector.sharedDirector().presentScene(level1Scene)
+        let level3Scene = CCBReader.loadAsScene("Levels/levelThree")
+        CCDirector.sharedDirector().presentScene(level3Scene)
     }
-    func Level4() {
-        let level1Scene = CCBReader.loadAsScene("Levels/levelOne")
-        CCDirector.sharedDirector().presentScene(level1Scene)
-    }
+//    func Level4() {
+//        let level1Scene = CCBReader.loadAsScene("Levels/levelOne")
+//        CCDirector.sharedDirector().presentScene(level1Scene)
+//    }
 }
 

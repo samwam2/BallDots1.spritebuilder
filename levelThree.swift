@@ -1,5 +1,5 @@
 //
-//  levelTwo.swift
+//  levelThree.swift
 //  BallDots
 //
 //  Created by Sam Showalter on 7/26/15.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class levelTwo: CCNode, CCPhysicsCollisionDelegate {
+class levelThree: CCNode, CCPhysicsCollisionDelegate {
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var Ball: CCNode!
     
@@ -32,7 +32,7 @@ class levelTwo: CCNode, CCPhysicsCollisionDelegate {
     }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, Ball: CCNode!, lose: CCNodeColor!) -> ObjCBool {
-        //retry()
+        retry()
         return true
         
     }
@@ -43,7 +43,7 @@ class levelTwo: CCNode, CCPhysicsCollisionDelegate {
     }
     
     func retry() {
-        let retrylevelScene = CCBReader.loadAsScene("Levels/levelTwo")
+        let retrylevelScene = CCBReader.loadAsScene("Levels/levelThree")
         CCDirector.sharedDirector().presentScene(retrylevelScene)
     }
 

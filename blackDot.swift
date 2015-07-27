@@ -16,7 +16,7 @@ class blackDot: CCNode {
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        removeAllChildrenWithCleanup(true)
+        removeAllChildrenWithCleanup(false)
         println("Touch on black dot")
     }
 }

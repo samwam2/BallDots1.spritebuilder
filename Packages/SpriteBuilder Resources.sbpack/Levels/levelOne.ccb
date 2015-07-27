@@ -621,8 +621,6 @@
 								<array/>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -1214,7 +1212,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>36.195995330810547</real>
+									<real>32.200141906738281</real>
 									<real>483.40695190429688</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -3442,7 +3440,7 @@
 							<key>collisionMask</key>
 							<array/>
 							<key>collisionType</key>
-							<string></string>
+							<string>lose</string>
 							<key>cornerRadius</key>
 							<real>0.0</real>
 							<key>density</key>
@@ -4398,7 +4396,7 @@
 								<key>value</key>
 								<array>
 									<real>320</real>
-									<real>-24</real>
+									<real>-24.863307952880859</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -4463,6 +4461,8 @@
 								<real>1</real>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>

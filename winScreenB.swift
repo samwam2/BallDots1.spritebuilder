@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class winScreenB: CCNode {
     
 //    func Next() {
@@ -18,5 +17,13 @@ class winScreenB: CCNode {
     func Next() {
         let nextscreenScene = CCBReader.loadAsScene("LevelScene")
         CCDirector.sharedDirector().presentScene(nextscreenScene)
+        
     }
+    
+//    func nextLevel() {
+//        
+//        for  levelOne in 1...5 {
+//            CCBReader.loadAsScene("Level/levelTwo")
+//        }
+//    }
 }

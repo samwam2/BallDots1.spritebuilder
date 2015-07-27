@@ -14,13 +14,8 @@ class Dot: CCNode {
     var location = CGPoint(x: CGFloat(), y: CGFloat())
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var counter: CCLabelTTF!
-    var dotDeletedCounter: Int = 10 {
-        didSet {
-           //counter.string = "\(dotDeletedCounter)"
-            println("\(dotDeletedCounter)")
-        }
-    }
-    
+   
+ 
     func didLoadFromCCB() {
         self.userInteractionEnabled = true
     }
@@ -28,12 +23,21 @@ class Dot: CCNode {
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         //println("regular touch")
         //var touchLocation = touch.locationInNode(self)
-        removeFromParentAndCleanup(true)
+    
+    removeFromParentAndCleanup(true)
         
-      
+//        func randomBlack() {
+//            var location = touch.locationInNode(dot)
+//            var randomB = random()
+//            var black = blackDot()
+//
+//            
+        }
+    
         
-    }
-  
+//    func randomBlack() {
+//        
+//    }
     
    
     }

@@ -13,7 +13,7 @@ class levelOne: CCNode, CCPhysicsCollisionDelegate {
     //let nextLevel = CCBReader.loadAsScene("winScreen")
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var Ball: CCNode!
-    
+    var time: Int = 0
     func home() {
         let homeScene = CCBReader.loadAsScene("LevelScene")
         CCDirector.sharedDirector().presentScene(homeScene)
@@ -22,6 +22,7 @@ class levelOne: CCNode, CCPhysicsCollisionDelegate {
         userInteractionEnabled = true
         gamePhysicsNode.collisionDelegate = self
        //CMMotionManager
+        time++
 
     }
     func winThing() {
@@ -37,14 +38,16 @@ class levelOne: CCNode, CCPhysicsCollisionDelegate {
 
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, Ball: CCNode!, Wall: CCNodeColor!) -> Bool {
-        let energy = pair.totalKineticEnergy
+    //func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, Ball: CCNode!, lose: CCNodeColor!) -> ObjCBool {
+//        if time > 5 {
+//            retrylevel()
+//
+//        }
+        //retrylevel()
         
-        //        println("Ball hit the wall and it worked ish")
-        //energy.Ball
-        return true
-
-    }
+//        return true
+//
+//    }
     
     func retrylevel() {
         let retrylevelScene = CCBReader.loadAsScene("Levels/levelOne")
