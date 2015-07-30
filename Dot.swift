@@ -12,10 +12,9 @@ import Foundation
 class Dot: CCNode {
     weak var dot: CCNode!
     var location = CGPoint(x: CGFloat(), y: CGFloat())
-    weak var gamePhysicsNode: CCPhysicsNode!
     weak var counter: CCLabelTTF!
-   
- 
+    
+    
     func didLoadFromCCB() {
         self.userInteractionEnabled = true
     }
@@ -23,22 +22,13 @@ class Dot: CCNode {
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         //println("regular touch")
         //var touchLocation = touch.locationInNode(self)
-    
-    removeFromParentAndCleanup(true)
         
-//        func randomBlack() {
-//            var location = touch.locationInNode(dot)
-//            var randomB = random()
-//            var black = blackDot()
-//
-//            
-        }
-    
+        var ball:Ball = self.parent.getChildByName("ball", recursively: true) as! Ball
+        ball.physicsBody.applyImpulse(ccp(30,30))
         
-//    func randomBlack() {
-//        
-//    }
-    
-   
+        removeFromParentAndCleanup(true)
+        
     }
+    
+}
 

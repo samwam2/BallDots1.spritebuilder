@@ -27,9 +27,9 @@ class MainScene: CCNode {
         CCDirector.sharedDirector().presentScene(aboutthegameScene)
     }
     
-    func LevelMenu() {
-        let levelmenuScene = CCBReader.loadAsScene("LevelScene")
-        CCDirector.sharedDirector().presentScene(levelmenuScene)
+    func gridButton() {
+        let gridbuttonScene = CCBReader.loadAsScene("GridScene")
+        CCDirector.sharedDirector().presentScene(gridbuttonScene)
     }
     
     //last closing bracket all new code ^

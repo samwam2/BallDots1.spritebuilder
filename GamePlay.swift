@@ -13,57 +13,70 @@ class GamePlay: CCScene, CCPhysicsCollisionDelegate {
     weak var ball: CCNode!
     weak var Win: CCNodeColor!
     weak var gamePhysicsNode: CCPhysicsNode!
-    var aGridArray:[[CGPoint]]?
-    
-    
+    weak var levelNode: CCNode!
+    weak var contentNode: CCNode!
+    var level = CCBReader.loadAsScene("Levels/level1")
+//Character = 1
+    var currentLevel: Int = 1
+   // var currentLevelPath = "Levels/level\(currentLevel)"
     //all lets here
     
 
     func didLoadFromCCB() {
-        //var grid = Grid(columns: 10, rows: 10, spacing: 10)
-//        ball.physicsBody
-        
-        var grid = CCBReader.load("Grid") as! Grid
-        aGridArray = grid.setAll(10, rows: 10, spacing: 50)
-        for pointArray in aGridArray! {
-            for point in pointArray {
-                var temporaryDot = CCBReader.load("Dot")
-                temporaryDot.position = point
-                gamePhysicsNode.addChild(temporaryDot)
-                //println("added dot at position \(temporaryDot.position)")
-                
-            }
-        }
-        //CCBReader.load("Dot")
+    
         userInteractionEnabled = true
         //gamePhysicsNode.debugDraw = true
-    
         gamePhysicsNode.collisionDelegate = self
-        
-    }
-
-    func retry() {
-        let gameplayScene = CCBReader.loadAsScene("GamePlay")
-        CCDirector.sharedDirector().presentScene(gameplayScene)
-        
-    }
-
-    func detectTouch(touch: CCTouch) {
-        var currentTouch = convertToNodeSpace(touch.locationInWorld())
-        
-//        for dotGlobal in dots {
-//            
-//            var dots = convertToNodeSpace(dotGlobal.position)
-//            
-//        }
-        
+            levelNode.addChild(level)
     }
     
+    
+    //Buttons in the screen
+    func retry() {
+        whatLevel()
+    }
     func Back() {
         let backscene = CCBReader.loadAsScene("MainScene")
         CCDirector.sharedDirector().presentScene(backscene)
     }
     
     
+    func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair!, ball: CCNode!, win: CCNode!) {
+        currentLevel++
+        println("\(currentLevel)")
+        whatLevel()
+    }
+    
+    func whatLevel() {
+        if currentLevel == 1 {
+            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level1")
+            levelNode.removeChild(level)
+            level = levelLoad
+            levelNode.addChild(level) 
+        } else if currentLevel == 2 {
+            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level2")
+            levelNode.removeChild(level)
+            level = levelLoad
+            levelNode.addChild(level)
+        } else if currentLevel == 3 {
+            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level3")
+            levelNode.removeChild(level)
+            level = levelLoad
+            levelNode.addChild(level)
+        } else if currentLevel == 4 {
+            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level4")
+            levelNode.removeChild(level)
+            level = levelLoad
+            levelNode.addChild(level)
+        } else {
+            println("this failed")
+            levelNode.removeChild(level)
+        }
+        
+    }
+    
+    
     //last closing bracket all new code ^
 }
+
+

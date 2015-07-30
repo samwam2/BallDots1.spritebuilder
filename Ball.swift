@@ -1,11 +1,13 @@
 //
-//  Level-1.swift
+//  Ball.swift
 //  BallDots
 //
-//  Created by Sam Showalter on 7/24/15.
+//  Created by Sam Showalter on 7/28/15.
 //  Copyright (c) 2015 Apportable. All rights reserved.
 //
 
 import Foundation
 
-class Level-1:
+class Ball: CCNode {
+    
+}

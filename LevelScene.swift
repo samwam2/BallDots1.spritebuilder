@@ -27,9 +27,9 @@ class LevelScene: CCNode {
         let level3Scene = CCBReader.loadAsScene("Levels/levelThree")
         CCDirector.sharedDirector().presentScene(level3Scene)
     }
-//    func Level4() {
-//        let level1Scene = CCBReader.loadAsScene("Levels/levelOne")
-//        CCDirector.sharedDirector().presentScene(level1Scene)
-//    }
+    func Level4() {
+        let level4Scene = CCBReader.loadAsScene("Levels/levelFour")
+        CCDirector.sharedDirector().presentScene(level4Scene)
+    }
 }
 
