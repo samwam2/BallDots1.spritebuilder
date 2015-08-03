@@ -17,6 +17,6 @@ class blackDot: CCNode {
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         //turn off before upload to testflight
-        removeFromParentAndCleanup(false)
+        removeFromParentAndCleanup(true)
     }
 }

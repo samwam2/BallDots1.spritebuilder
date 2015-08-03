@@ -1022,8 +1022,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>220.44827270507812</real>
-							<real>29.780725479125977</real>
+							<real>181.64144897460938</real>
+							<real>28.307689666748047</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1060,8 +1060,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.30000001192092896</real>
-							<real>0.30000001192092896</real>
+							<real>0.24738495051860809</real>
+							<real>0.27053928375244141</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1088,6 +1088,8 @@
 						<real>1</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -4104,8 +4106,6 @@
 						<string>Ball.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

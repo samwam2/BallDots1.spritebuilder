@@ -48,30 +48,39 @@ class GamePlay: CCScene, CCPhysicsCollisionDelegate {
     }
     
     func whatLevel() {
-        if currentLevel == 1 {
-            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level1")
-            levelNode.removeChild(level)
-            level = levelLoad
-            levelNode.addChild(level) 
-        } else if currentLevel == 2 {
-            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level2")
-            levelNode.removeChild(level)
-            level = levelLoad
-            levelNode.addChild(level)
-        } else if currentLevel == 3 {
-            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level3")
-            levelNode.removeChild(level)
-            level = levelLoad
-            levelNode.addChild(level)
-        } else if currentLevel == 4 {
-            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level4")
-            levelNode.removeChild(level)
-            level = levelLoad
-            levelNode.addChild(level)
-        } else {
-            println("this failed")
-            levelNode.removeChild(level)
-        }
+        var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level\(currentLevel)")
+        levelNode.removeChild(level)
+        level = levelLoad
+        levelNode.addChild(level)
+        
+//        CCDirector.sharedDirector().viewSize().width - level.contentSize.width
+
+        
+        
+//        if currentLevel == 1 {
+//            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level1")
+//            levelNode.removeChild(level)
+//            level = levelLoad
+//            levelNode.addChild(level) 
+//        } else if currentLevel == 2 {
+//            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level2")
+//            levelNode.removeChild(level)
+//            level = levelLoad
+//            levelNode.addChild(level)
+//        } else if currentLevel == 3 {
+//            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level3")
+//            levelNode.removeChild(level)
+//            level = levelLoad
+//            levelNode.addChild(level)
+//        } else if currentLevel == 4 {
+//            var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level4")
+//            levelNode.removeChild(level)
+//            level = levelLoad
+//            levelNode.addChild(level)
+//        } else {
+//            println("this failed")
+//            levelNode.removeChild(level)
+//        }
         
     }
     

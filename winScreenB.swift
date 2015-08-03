@@ -10,14 +10,9 @@ import Foundation
 
 class winScreenB: CCNode {
     
-//    func Next() {
-//        let nextScene = CCBReader.loadAsScene("LevelScene")
-//        CCDirector.sharedDirector().presentScene(nextScene)
-//    }
     func Next() {
-        let nextscreenScene = CCBReader.loadAsScene("LevelScene")
+        let nextscreenScene = CCBReader.loadAsScene("GridScene")
         CCDirector.sharedDirector().presentScene(nextscreenScene)
-        
     }
     
 //    func nextLevel() {

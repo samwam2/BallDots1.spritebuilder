@@ -15,6 +15,9 @@ class WinBox: CCNode {
     self.userInteractionEnabled = true
     }
     
+    override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+        
+    }
    
     
 }

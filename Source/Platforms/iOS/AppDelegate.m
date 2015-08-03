@@ -59,7 +59,7 @@
 
 - (CCScene*) startScene
 {
-    return [CCBReader loadAsScene:@"GridScene"]; //MainScene , Levels/levelOne
+    return [CCBReader loadAsScene:@"MainScene"]; //MainScene , Levels/levelOne
 }
 
 @end

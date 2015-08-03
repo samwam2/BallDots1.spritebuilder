@@ -51,7 +51,7 @@
 				<key>displayName</key>
 				<string>CCNodeColor</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>winBox</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -109,8 +109,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.30000001192092896</real>
-							<real>0.30000001192092896</real>
+							<real>0.22423242032527924</real>
+							<real>0.22423242032527924</real>
 							<true/>
 							<integer>0</integer>
 						</array>
@@ -137,8 +137,6 @@
 						<real>1</real>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -146,7 +144,7 @@
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
-		<string>winBox</string>
+		<string></string>
 		<key>memberVarAssignmentType</key>
 		<integer>1</integer>
 		<key>physicsBody</key>
@@ -180,32 +178,32 @@
 					<real>0.0</real>
 				</array>
 				<array>
-					<real>0.32210588455200195</real>
-					<real>30.202556610107422</real>
+					<real>0.7885444164276123</real>
+					<real>22.796215057373047</real>
 				</array>
 				<array>
-					<real>29.859773635864258</real>
-					<real>30.375215530395508</real>
+					<real>21.816932678222656</real>
+					<real>22.136520385742188</real>
 				</array>
 				<array>
-					<real>29.684537887573242</real>
-					<real>0.20874772965908051</real>
+					<real>22.046285629272461</real>
+					<real>-0.61331790685653687</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>29.684537887573242</real>
-						<real>0.20874772965908051</real>
+						<real>22.046285629272461</real>
+						<real>-0.61331790685653687</real>
 					</array>
 					<array>
-						<real>29.859773635864258</real>
-						<real>30.375215530395508</real>
+						<real>21.816932678222656</real>
+						<real>22.136520385742188</real>
 					</array>
 					<array>
-						<real>0.32210588455200195</real>
-						<real>30.202556610107422</real>
+						<real>0.7885444164276123</real>
+						<real>22.796215057373047</real>
 					</array>
 					<array>
 						<real>0.0</real>
@@ -245,10 +243,10 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>1</real>
-					<real>1</real>
-					<integer>2</integer>
-					<integer>2</integer>
+					<real>22</real>
+					<real>22</real>
+					<integer>0</integer>
+					<integer>0</integer>
 				</array>
 			</dict>
 			<dict>
@@ -276,6 +274,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
