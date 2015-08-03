@@ -53,12 +53,13 @@ Have the dots / grid setup in different ways.
 
 ### Week 7 (8/4 - 8/7/2015)
 * Determine what other polish is needed
-* Fix stuff
-
+* Finish random level generator 
+* Submit to app store on the 9th
+* Write game description for App store
+* Screenshots
+ 
 ### Week 8 (8/10 - 8/15/2014) - _finishing the polish_
 * Check for all bugs
-* Integrate analytics
-* Screenshots
-* Write game description for App store
-* Upload to App store for review 
+* Integrate analytics for next update
 * Play around with Apportable to see if Android release is feasible
+* Work on next update
