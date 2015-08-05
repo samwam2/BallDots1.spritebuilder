@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WinBox: CCNode {
+class WinBox: CCNode, CCPhysicsCollisionDelegate {
     weak var winBox: CCNode!
 
    func didLoadFromCCB() {

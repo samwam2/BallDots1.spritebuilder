@@ -8,12 +8,26 @@
 
 import Foundation
 
+class GridPoint {
+    var isBlackDot = false
+    var point: CGPoint?
+    
+    init(x: CGFloat, y: CGFloat, isBlackDot: Bool) {
+        point = CGPoint(x: x, y: y)
+        self.isBlackDot = isBlackDot
+    }
+    
+    func isEqual(comparePoint: GridPoint) -> Bool {
+        return self.point?.x == comparePoint.point?.x && self.point?.y == comparePoint.point?.y
+    }
+}
+
 class Grid: CCNode {
     //(JS) Made this a ccnode
     //all vars here
 
 
-    var grid: [[CGPoint]] = [[CGPoint]]()
+    var grid = [[GridPoint]]()
     var columns: Int = 0
     var rows: Int = 0
     var spacing: Int = 0
@@ -25,7 +39,7 @@ class Grid: CCNode {
 
     
     
-    func setAll(columns: Int, rows: Int, spacing: Int) -> [[CGPoint]] {
+    func setAll(columns: Int, rows: Int, spacing: Int) -> [[GridPoint]] { //GridPoint
         self.columns = columns
         self.rows = rows
         self.spacing = spacing
@@ -33,12 +47,12 @@ class Grid: CCNode {
         for row in 0..<self.rows {
             grid.append([])
             for column in 0..<self.columns{
-                var point = CGPoint(x: CGFloat(row * spacing), y: CGFloat(column * spacing))
+                var point = GridPoint(x: CGFloat(row * spacing), y: CGFloat(column * spacing), isBlackDot: false)
                 grid[row].append(point)
             }
         }
         
-        return grid
+        return grid //grid
 
     }
     

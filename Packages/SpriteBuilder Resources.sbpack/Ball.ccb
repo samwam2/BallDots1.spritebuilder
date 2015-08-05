@@ -51,7 +51,7 @@
 				<key>displayName</key>
 				<string>ball-513509_640</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>ball</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -169,7 +169,7 @@
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>ballType</string>
+			<string>ballCollision</string>
 			<key>cornerRadius</key>
 			<real>24.20703125</real>
 			<key>density</key>
