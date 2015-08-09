@@ -23,8 +23,8 @@ class Dot: CCNode {
         //println("regular touch")
         //var touchLocation = touch.locationInNode(self)
         
-        var ball:Ball = self.parent.getChildByName("ball", recursively: true) as! Ball
-        ball.physicsBody.applyImpulse(ccp(30,30))
+//        var ball:Ball = self.parent.getChildByName("ball", recursively: true) as! Ball
+//        ball.physicsBody.applyImpulse(ccp(30,30))
         
         removeFromParentAndCleanup(true)
         

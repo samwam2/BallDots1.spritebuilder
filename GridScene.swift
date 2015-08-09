@@ -9,79 +9,56 @@
 import Foundation
 import CoreGraphics
 
-class GridScene: CCNode, CCPhysicsCollisionDelegate {
+class GridScene: CCNode, CCPhysicsCollisionDelegate {   
     var aGridArray: Grid?
-//    var gridArray: [[CGPoint]]? //CGPoint
     weak var ball: CCNode!
     weak var dot: CCNode!
     weak var BlackDot: CCNode!
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var winBox: CCNode!
     var currentLevel: Int = 1
-    
-    var blackDotTotal = 0
-    var redDotTotal = 0
-    var randomLoad = random()
-    var numberOfBlackDotsPerRow: Int = 0
+
     
     
     func didLoadFromCCB() {
         gamePhysicsNode.collisionDelegate = self
         aGridArray = CCBReader.load("Grid") as? Grid
         aGridArray!.setAll(10, rows: 6, spacing: 50)
-        currentLevel = 1
-        //randomWinBoxPlace()
+        randomWinBoxPlace()
         generateDotsForLevel(currentLevel)
         gamePhysicsNode.debugDraw = false
         
-        dot.anchorPoint.getMirror()
+               
+        //dot.anchorPoint.getMirror()
 
-        println("how many red dots there are\(redDotTotal)")
-        println("\(currentLevel)")
         
-       
-        
-        CCBReader.load("Dot")
+       CCBReader.load("Dot")
         CCBReader.load("blackDot")
     }
     
-    
-    // 2 and 5
-    // if for levels
-    
+    //Has the range of levels and uses loadGridWithCode to put in to number of the distance apart and totalNumberOfBlackDots
     func generateDotsForLevel(levelNum: Int) {
-
-        var distanceApart: Int
-        //var distance: CGFloat = ccpDistance(dot.position, BlackDot.position)
-        loadGridWithCode(2, totalNumberOfBlackDots: 10)
-        var redDot = CCBReader.load("Dot")
-//        redDotTotal.position = CGPoint()
-      
-        //println("\(distanceApart)")
-//        var blackDotTotal = 0
+//        currentLevel = 11
         
         if currentLevel >= 1 && currentLevel <= 10 {
-            distanceApart = 3
-            blackDotTotal = 10
-            numberOfBlackDotsPerRow = 1
-            println("this worked")
-            let distanceApart = 2
-
-//            loadGridWithCode(distanceApart, totalNumberOfBlackDots: 10)
+            loadGridWithCode(2, totalNumberOfBlackDots: 6)
+            println("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
             
         } else if currentLevel >= 11 && currentLevel <= 20 {
-            distanceApart = 2
-            blackDotTotal = 10
+            loadGridWithCode(2, totalNumberOfBlackDots: 10)
+            
         } else if currentLevel >= 21 && currentLevel <= 30 {
-            distanceApart = 2
-            blackDotTotal = 12
+            loadGridWithCode(2, totalNumberOfBlackDots: 15)
+            
         } else {
-            println("this failed")
+            println("Level Failed to load")
             
         }
     }
-    
+    //Has all of the code to load the black and red dots for the lelvels
     func loadGridWithCode(distanceApart: Int, totalNumberOfBlackDots: Int) {
+        
+        
         //find all valid spots for black dots based on given parameters (distanceApart)
         var possibleBlackDotPoints = [GridPoint]()
         let rows = aGridArray?.rows
@@ -97,9 +74,10 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
         //select totalNumberOfBlackDots randomly from list of all possible locations
         for index in 0..<totalNumberOfBlackDots {
             let x = Int.random(min: 0, max: possibleBlackDotPoints.count - 1) //random number DONE
-            println("random \(x)")
+            //println("random \(x)")
             possibleBlackDotPoints[x].isBlackDot = true
-            println(index)
+            
+           // println(index)
         }
         
         for var row = 0; row < rows; row++ {
@@ -115,23 +93,72 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
                 gamePhysicsNode.addChild(dot)
             }
         }
+    }
+
+    // Function for randomly loading the box
+    func randomWinBoxPlace() {
+        var winboxB = CCBReader.load("WinBox")
+        var screenSize = CCDirector.sharedDirector().viewSize().width
+        var winboxSize =  winboxB.contentSize.width
+        var math = screenSize - winboxSize
+        var randomNum = arc4random() % UInt32(math)
+        winboxB.position = ccp(CGFloat(randomNum) ,CGFloat(0))
+        gamePhysicsNode.addChild(winboxB)
+    }
+    
+    // Back and retry are both buttons
+    func back() {
+        removeFromParentAndCleanup(true)
+        let backScene = CCBReader.loadAsScene("MainScene")
+        CCDirector.sharedDirector().presentScene(backScene)
+    }
+    
+    //Retry is not wroking
+    func retry() {
+    let backScene = CCBReader.loadAsScene("GridScene")
+    CCDirector.sharedDirector().presentScene(backScene)
+
+      generateDotsForLevel(currentLevel)
+      ball.position = CGPoint(x: 156, y: 533)
         
+    }
+    
+   
+    //ccPhysicsCollisionBegin when the collides with the win box
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, ballCollision: CCNode!, win: CCNode!) -> Bool {
+        currentLevel++
+        let backScene = CCBReader.loadAsScene("GridScene")
+        CCDirector.sharedDirector().presentScene(backScene)
         
+        generateDotsForLevel(currentLevel)
+    
         
-        
-//        for
-        
+        ball.position = CGPoint(x: 156, y: 533)
+        return true
+    }
+  
+    //Winscreen called in ccPhysicsCollisionBegin
+//    func winthing() {
+//        let winscene = CCBReader.loadAsScene("winScreenB")
+//        CCDirector.sharedDirector().presentScene(winscene)
+//        }
+
+}
+// class full of the extra old code
+class extraStuff: CCNode {
+    
+
 //            //setup grid based possibleBlackDotPoints & contents of aGridArray
 //        //...
 //            for index  in aGridArray?.grid {
-//                
+//
 //            //resets the blackDotTotal to 0 in each row
 //            var blackDotTotal = 0
-//            
+//
 //            for point in possibleBlackDotPoints {
-//                
+//
 //                var dotType = ""
-//                
+//
 //                switch Int.random(min: 1, max: 2)
 //                {
 //                case 1:
@@ -143,8 +170,8 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
 //                default:
 //                    println("Unknown DotType")
 //                }
-//                
-//                
+//
+//
 //                if blackDotTotal > numberOfBlackDotsPerRow && dotType == "blackDot" {
 //                    dotType = "Dot"
 //                }
@@ -154,14 +181,11 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
 //                //temporaryDot.ball = ball
 //                gamePhysicsNode.addChild(temporaryDot)
 //                }
-//            
+//
 //            } }
-
-        }
-    
 //    func loadGridWithCode() {
 //
-        //find all valid spots for black dots based on given parameters (distanceApart)
+//find all valid spots for black dots based on given parameters (distanceApart)
 //        for var row = 0; row < aGridArray.rows; index++ {
 //
 //        }
@@ -170,10 +194,10 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
 //        for index in 0..<(aGridArray?.count)! {
 //            let x = 3 //rand x
 //            let y = 4 //rand y
-//            
+//
 ////            aGridArray![x][y].isBlackDot = true
 //        }
-//        
+//
 //        //setting dots in grid
 ////        for column in aGridArray {
 ////            if dot.isBlackDot {
@@ -182,18 +206,18 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
 ////                //load in red dot
 ////            }
 //        }
-//        
+//
 //        var grid = CCBReader.load("Grid") as! Grid
 ////        aGridArray = grid.setAll(10, rows: 6, spacing: 50)
 //        for pointArray in aGridArray! {
-//            
+//
 //            //resets the blackDotTotal to 0 in each row
 //            var blackDotTotal = 0
-//            
+//
 ////            for point in pointArray {
-//    
+//
 //                var dotType = ""
-//                
+//
 //                switch Int.random(min: 1, max: 2)
 //                {
 //                case 1:
@@ -205,8 +229,8 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
 //                default:
 //                    println("Unknown DotType")
 //                }
-//                
-//                
+//
+//
 //                if blackDotTotal > numberOfBlackDotsPerRow && dotType == "blackDot" {
 //                    dotType = "Dot"
 //                }
@@ -216,42 +240,8 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
 //                //temporaryDot.ball = ball
 //                gamePhysicsNode.addChild(temporaryDot)
 ////            }
-//    
+//
 //    }
-
-
-    
-    // Function for randomly loading the box
-    func randomWinBoxPlace() {
-        var winboxB = CCBReader.load("WinBox")
-        var screenSize = CCDirector.sharedDirector().viewSize().width
-        var winboxSize =  winboxB.contentSize.width
-        var math = screenSize - winboxSize
-       // println("\(screenSize) \(winboxSize)")
-        var randomNum = arc4random() % UInt32(math)
-        winboxB.position = ccp(CGFloat(randomNum) ,CGFloat(0))
-        gamePhysicsNode.addChild(winboxB)
-    }
-
-    func back() {
-        let backScene = CCBReader.loadAsScene("MainScene")
-        CCDirector.sharedDirector().presentScene(backScene)
-    }
-    func retry() {
-        let retryScene =  CCBReader.loadAsScene("GridScene")
-       CCDirector.sharedDirector().presentScene(retryScene)
-    }
-    
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, ballCollision: CCNode!, win: CCNode!) -> Bool {
-        currentLevel++
-        //winthing()
-        
-        return true
-    }
-
-    func winthing() {
-        let winscene = CCBReader.loadAsScene("winScreenB")
-        CCDirector.sharedDirector().presentScene(winscene)
-        }
-
 }
+
+

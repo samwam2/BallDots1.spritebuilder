@@ -18,7 +18,7 @@ class MainScene: CCNode {
         userInteractionEnabled = true
     }
     func StartGame() {
-        let gameplayScene = CCBReader.loadAsScene("GamePlay")
+        let gameplayScene = CCBReader.loadAsScene("GridScene")
         CCDirector.sharedDirector().presentScene(gameplayScene)
     }
     
@@ -27,10 +27,10 @@ class MainScene: CCNode {
         CCDirector.sharedDirector().presentScene(aboutthegameScene)
     }
     
-    func gridButton() {
-        let gridbuttonScene = CCBReader.loadAsScene("GridScene")
-        CCDirector.sharedDirector().presentScene(gridbuttonScene)
-    }
+//    func gridButton() {
+//        let gridbuttonScene = CCBReader.loadAsScene("GridScene")
+//        CCDirector.sharedDirector().presentScene(gridbuttonScene)
+//    }
     
     //last closing bracket all new code ^
 }

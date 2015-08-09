@@ -12,11 +12,11 @@ class blackDot: CCNode {
     weak var BlackDot: CCNode!
     
     func didLoadFromCCB() {
-        self.userInteractionEnabled = true
+        self.userInteractionEnabled = false
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         //turn off before upload to testflight
-        removeFromParentAndCleanup(true)
+        removeFromParentAndCleanup(false)
     }
 }

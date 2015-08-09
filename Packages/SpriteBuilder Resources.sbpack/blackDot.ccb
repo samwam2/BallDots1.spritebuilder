@@ -171,13 +171,13 @@
 			<key>collisionType</key>
 			<string></string>
 			<key>cornerRadius</key>
-			<real>16.46116828918457</real>
+			<real>15.79708194732666</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
 			<false/>
 			<key>elasticity</key>
-			<real>0.60000002384185791</real>
+			<real>1</real>
 			<key>friction</key>
 			<real>0.30000001192092896</real>
 			<key>points</key>

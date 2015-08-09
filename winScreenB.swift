@@ -9,10 +9,12 @@
 import Foundation
 
 class winScreenB: CCNode {
-    
+    var SceneGrid = CCBReader.load("GridScene") as! GridScene
     func Next() {
-        let nextscreenScene = CCBReader.loadAsScene("GridScene")
+        var currentLevelWin = SceneGrid.currentLevel
+        let nextscreenScene = CCBReader.loadAsScene("GridScene\(currentLevelWin)")
         CCDirector.sharedDirector().presentScene(nextscreenScene)
+        
     }
     
 //    func nextLevel() {

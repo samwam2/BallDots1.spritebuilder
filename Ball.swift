@@ -10,4 +10,5 @@ import Foundation
 
 class Ball: CCNode, CCPhysicsCollisionDelegate {
     weak var ball: CCNode!
+    
 }
