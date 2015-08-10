@@ -1180,7 +1180,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = BallDots;
-				PROVISIONING_PROFILE = "12ef6992-cad1-4295-9d6b-d71c1c86ada1";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1216,7 +1216,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = BallDots;
-				PROVISIONING_PROFILE = "12ef6992-cad1-4295-9d6b-d71c1c86ada1";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;

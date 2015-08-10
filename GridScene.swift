@@ -16,7 +16,16 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
     weak var BlackDot: CCNode!
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var winBox: CCNode!
+    weak var LevelOnScreen: CCLabelTTF!
+    
     var currentLevel: Int = 1
+    
+    var levleForLabel: Int = 0 //{
+//        didSet {
+//            LevelOnScreen.string = "\(levleForLabel)22"
+//        }
+//    }
+    
 
     
     
@@ -24,13 +33,9 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
         gamePhysicsNode.collisionDelegate = self
         aGridArray = CCBReader.load("Grid") as? Grid
         aGridArray!.setAll(10, rows: 6, spacing: 50)
-        randomWinBoxPlace()
+//        randomWinBoxPlace()
         generateDotsForLevel(currentLevel)
         gamePhysicsNode.debugDraw = false
-        
-               
-        //dot.anchorPoint.getMirror()
-
         
        CCBReader.load("Dot")
         CCBReader.load("blackDot")
@@ -38,10 +43,11 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
     
     //Has the range of levels and uses loadGridWithCode to put in to number of the distance apart and totalNumberOfBlackDots
     func generateDotsForLevel(levelNum: Int) {
-//        currentLevel = 11
+       // currentLevel = 31
         
         if currentLevel >= 1 && currentLevel <= 10 {
             loadGridWithCode(2, totalNumberOfBlackDots: 6)
+    randomWinBoxPlace()
             println("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
             
         } else if currentLevel >= 11 && currentLevel <= 20 {
@@ -49,7 +55,11 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
             
         } else if currentLevel >= 21 && currentLevel <= 30 {
             loadGridWithCode(2, totalNumberOfBlackDots: 15)
+             println("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
             
+        } else if currentLevel ==  30 {
+            let load = CCBReader.loadAsScene("winScreenB")
+            CCDirector.sharedDirector().presentScene(load)
         } else {
             println("Level Failed to load")
             
@@ -70,6 +80,7 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
                 }
             }
         }
+  
         
         //select totalNumberOfBlackDots randomly from list of all possible locations
         for index in 0..<totalNumberOfBlackDots {
@@ -126,16 +137,21 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
    
     //ccPhysicsCollisionBegin when the collides with the win box
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, ballCollision: CCNode!, win: CCNode!) -> Bool {
+        
         currentLevel++
+        
         let backScene = CCBReader.loadAsScene("GridScene")
         CCDirector.sharedDirector().presentScene(backScene)
-        
+        levleForLabel++
+        LevelOnScreen.string = String(levleForLabel)
         generateDotsForLevel(currentLevel)
-    
         
         ball.position = CGPoint(x: 156, y: 533)
+        
         return true
     }
+    
+    
   
     //Winscreen called in ccPhysicsCollisionBegin
 //    func winthing() {

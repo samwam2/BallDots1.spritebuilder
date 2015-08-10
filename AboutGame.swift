@@ -18,4 +18,7 @@ class AboutGame: CCNode {
         let mainmenuScene = CCBReader.loadAsScene("MainScene")
         CCDirector.sharedDirector().presentScene(mainmenuScene)
     }
+    
+    
+   
 }
