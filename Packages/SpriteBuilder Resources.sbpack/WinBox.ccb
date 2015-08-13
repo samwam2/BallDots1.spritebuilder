@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -51,11 +51,19 @@
 				<key>displayName</key>
 				<string>CCNodeColor</string>
 				<key>memberVarAssignmentName</key>
-				<string>winBox</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
 				<array>
+					<dict>
+						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
 					<dict>
 						<key>name</key>
 						<string>name</string>
@@ -138,6 +146,116 @@
 					</dict>
 				</array>
 			</dict>
+			<dict>
+				<key>UUID</key>
+				<integer>2</integer>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>basket-312685_640</string>
+				<key>memberVarAssignmentName</key>
+				<string>winBox</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.30000001192092896</real>
+							<real>0.30000001192092896</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>spriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>basket-312685_640.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array/>
+					</dict>
+				</array>
+				<key>selected</key>
+				<true/>
+			</dict>
 		</array>
 		<key>customClass</key>
 		<string>WinBox</string>
@@ -174,40 +292,40 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>8.7321300506591797</real>
+					<real>0.53065019845962524</real>
 				</array>
 				<array>
-					<real>-0.21564656496047974</real>
-					<real>21.77570915222168</real>
+					<real>2.7182092666625977</real>
+					<real>21.987766265869141</real>
 				</array>
 				<array>
-					<real>21.816932678222656</real>
-					<real>22.136520385742188</real>
+					<real>46.264507293701172</real>
+					<real>22.21925163269043</real>
 				</array>
 				<array>
-					<real>22.046285629272461</real>
-					<real>-0.61331790685653687</real>
+					<real>40.913887023925781</real>
+					<real>0.96504670381546021</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>22.046285629272461</real>
-						<real>-0.61331790685653687</real>
+						<real>40.913887023925781</real>
+						<real>0.96504670381546021</real>
 					</array>
 					<array>
-						<real>21.816932678222656</real>
-						<real>22.136520385742188</real>
+						<real>46.264507293701172</real>
+						<real>22.21925163269043</real>
 					</array>
 					<array>
-						<real>-0.21564656496047974</real>
-						<real>21.77570915222168</real>
+						<real>2.7182092666625977</real>
+						<real>21.987766265869141</real>
 					</array>
 					<array>
-						<real>0.0</real>
-						<real>0.0</real>
+						<real>8.7321300506591797</real>
+						<real>0.53065019845962524</real>
 					</array>
 				</array>
 			</array>
@@ -243,8 +361,8 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>22</real>
-					<real>22</real>
+					<real>45</real>
+					<real>44</real>
 					<integer>0</integer>
 					<integer>0</integer>
 				</array>
@@ -274,8 +392,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

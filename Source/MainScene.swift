@@ -7,8 +7,9 @@
 //
 import Foundation
 import UIKit
+import GameKit
 
-class MainScene: CCNode, CCPhysicsCollisionDelegate {
+class MainScene: CCNode, CCPhysicsCollisionDelegate { //, GKGameCenterControllerDelegate {
     //all vars here
     
     weak var gamePhysicsNode: CCPhysicsNode!
@@ -17,11 +18,21 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate {
     //all lets here
     
     
+    
     func didLoadFromCCB() {
         userInteractionEnabled = true
         gamePhysicsNode.collisionDelegate = self
+        setUpGameCenter()
         
     }
+    func setUpGameCenter() { let gameCenterInteractor = GameCenterInteractor.sharedInstance; gameCenterInteractor.authenticationCheck()
+    
+    }
+    
+    func openGameCenter() {
+        showLeaderboard()
+    }
+    
     func StartGame() {
         let gameplayScene = CCBReader.loadAsScene("GridScene")
         CCDirector.sharedDirector().presentScene(gameplayScene)
@@ -30,19 +41,20 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate {
     func AboutTheGame() {
         let aboutthegameScene = CCBReader.loadAsScene("AboutGame")
         CCDirector.sharedDirector().presentScene(aboutthegameScene)
+    
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, ballCollision: CCNode!, resetBall: CCNodeColor!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, ballCollision: CCNode!, resetBall: CCNodeColor!) -> ObjCBool {
         ball.position = CGPoint(x: 157, y: 591)
         return true
     }
     
-    //All share button code
+   // All share button code
     func shareButtonTapped() {
         var scene = CCDirector.sharedDirector().runningScene
         var n: AnyObject = scene.children[0]
         var image = screenShotWithStartNode(n as! CCNode)
-        let sharedText = "Share text"
+        let sharedText = "Come Play The Dot Challenge, http://tinyurl.com/balldots"
         let itemsToShare = [image, sharedText]
         var excludedActivities = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard,
             UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll,
@@ -63,10 +75,26 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate {
     }
 
     
-//    func gridButton() {
-//        let gridbuttonScene = CCBReader.loadAsScene("GridScene")
-//        CCDirector.sharedDirector().presentScene(gridbuttonScene)
-//    }
+   
+    
+    
+    
+    
     
     //last closing bracket all new code ^
 }
+
+extension MainScene: GKGameCenterControllerDelegate {
+    func showLeaderboard() {
+        var viewController = CCDirector.sharedDirector().parentViewController!
+        var gameCenterViewController = GKGameCenterViewController()
+        gameCenterViewController.gameCenterDelegate = self
+        viewController.presentViewController(gameCenterViewController, animated: true, completion: nil)
+    }
+    
+    // Delegate methods
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController!) {
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+

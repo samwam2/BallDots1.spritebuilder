@@ -51,8 +51,10 @@
 		8F6DD6FD1B55D6E900D9BDBD /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6DD6FC1B55D6E900D9BDBD /* GamePlay.swift */; };
 		8F7AED0F1B6048D5008A80F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F7AED0E1B6048D5008A80F6 /* Images.xcassets */; };
 		8F7AED191B61AA2D008A80F6 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7AED181B61AA2C008A80F6 /* LevelScene.swift */; };
+		8F801D361B78919500411DEB /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F801D351B78919500411DEB /* GameCenter.swift */; };
 		8F9902B71B6AA737007C057A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9902B61B6AA737007C057A /* Extensions.swift */; };
 		8F9902BB1B6AADD2007C057A /* WinBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9902BA1B6AADD2007C057A /* WinBox.swift */; };
+		8FD408151B788E51007F97EB /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD408141B788E51007F97EB /* GameKit.framework */; };
 		8FD85A431B60159C00CE5F66 /* AboutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD85A421B60159C00CE5F66 /* AboutGame.swift */; };
 		8FF08EDC1B62E80900DDB0C5 /* winScreenB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF08EDB1B62E80900DDB0C5 /* winScreenB.swift */; };
 		8FF08EDE1B62F06E00DDB0C5 /* blackDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF08EDD1B62F06E00DDB0C5 /* blackDot.swift */; };
@@ -159,6 +161,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8FD4080D1B788D8F007F97EB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -191,8 +206,13 @@
 		8F6DD6FC1B55D6E900D9BDBD /* GamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 		8F7AED0E1B6048D5008A80F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Source/libs/cocos2d-iphone/external/SSZipArchive/Images.xcassets"; sourceTree = "<group>"; };
 		8F7AED181B61AA2C008A80F6 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
+		8F801D351B78919500411DEB /* GameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
 		8F9902B61B6AA737007C057A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8F9902BA1B6AADD2007C057A /* WinBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinBox.swift; sourceTree = "<group>"; };
+		8FD408061B788D8F007F97EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FD408071B788D8F007F97EB /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		8FD408091B788D8F007F97EB /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		8FD408141B788E51007F97EB /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		8FD85A421B60159C00CE5F66 /* AboutGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutGame.swift; sourceTree = "<group>"; };
 		8FF08EDB1B62E80900DDB0C5 /* winScreenB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winScreenB.swift; sourceTree = "<group>"; };
 		8FF08EDD1B62F06E00DDB0C5 /* blackDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blackDot.swift; sourceTree = "<group>"; };
@@ -278,6 +298,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD408151B788E51007F97EB /* GameKit.framework in Frameworks */,
 				7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
@@ -447,6 +468,24 @@
 			name = Mac;
 			sourceTree = "<group>";
 		};
+		8FD408041B788D8F007F97EB /* demoShare */ = {
+			isa = PBXGroup;
+			children = (
+				8FD408071B788D8F007F97EB /* ShareViewController.swift */,
+				8FD408091B788D8F007F97EB /* MainInterface.storyboard */,
+				8FD408051B788D8F007F97EB /* Supporting Files */,
+			);
+			path = demoShare;
+			sourceTree = "<group>";
+		};
+		8FD408051B788D8F007F97EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FD408061B788D8F007F97EB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8FF08EDF1B62F07600DDB0C5 /* All Dot classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +511,7 @@
 				8F2943781B696ACE0085A312 /* GridScene.swift */,
 				8F0A569B1B68180600F983E7 /* Ball.swift */,
 				8FF08EDB1B62E80900DDB0C5 /* winScreenB.swift */,
+				8F801D351B78919500411DEB /* GameCenter.swift */,
 				8F6DD6FC1B55D6E900D9BDBD /* GamePlay.swift */,
 				8F25B1731B570DD300AFD208 /* Grid.swift */,
 				8F9902BA1B6AADD2007C057A /* WinBox.swift */,
@@ -513,6 +553,7 @@
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
 				B77F1CCF17B978D8009739AE /* Supporting Files */,
+				8FD408041B788D8F007F97EB /* demoShare */,
 				B77F1B3017B978D7009739AE /* Frameworks */,
 				B77F1B2F17B978D7009739AE /* Products */,
 			);
@@ -531,6 +572,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8FD408141B788E51007F97EB /* GameKit.framework */,
 				BC5399D31A44DCC90063F482 /* AndroidKit.framework */,
 				BC5399D41A44DCC90063F482 /* CoreJava.framework */,
 				BC5399D51A44DCC90063F482 /* GLActivityKit.framework */,
@@ -629,6 +671,7 @@
 				B77F1B2B17B978D7009739AE /* Frameworks */,
 				D352B47A19EC5D8A00829775 /* Compile Metal Shaders */,
 				B77F1B2C17B978D7009739AE /* Resources */,
+				8FD4080D1B788D8F007F97EB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -866,6 +909,7 @@
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				8F2943791B696ACF0085A312 /* GridScene.swift in Sources */,
 				8F25B1741B570DD300AFD208 /* Grid.swift in Sources */,
+				8F801D361B78919500411DEB /* GameCenter.swift in Sources */,
 				8F9902BB1B6AADD2007C057A /* WinBox.swift in Sources */,
 				8F9902B71B6AA737007C057A /* Extensions.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
@@ -1172,7 +1216,7 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -1209,7 +1253,7 @@
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-lz",

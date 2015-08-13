@@ -9,7 +9,7 @@
 import Foundation
 import CoreGraphics
 
-class GridScene: CCNode, CCPhysicsCollisionDelegate {   
+class GridScene: CCNode, CCPhysicsCollisionDelegate {
     var aGridArray: Grid?
     weak var ball: CCNode!
     weak var dot: CCNode!
@@ -17,8 +17,15 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
     weak var gamePhysicsNode: CCPhysicsNode!
     weak var winBox: CCNode!
     weak var LevelOnScreen: CCLabelTTF!
+    weak var winLayer: CCNode!
+
+   
     
     var currentLevel: Int = 1
+    
+//    init(currentLevel: Int) {
+//        self.currentLevel = Int()
+//    }
     
     var levleForLabel: Int = 0 //{
 //        didSet {
@@ -33,7 +40,18 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
         gamePhysicsNode.collisionDelegate = self
         aGridArray = CCBReader.load("Grid") as? Grid
         aGridArray!.setAll(10, rows: 6, spacing: 50)
+        //var DeviceiPhonee = CCDevice.DeviceiPhone
 //        randomWinBoxPlace()
+//        winLayer.visible = true
+        
+      
+//        if currentLevel == 1 {
+//            generateDotsForLevel(currentLevel)
+//            println("level 1")
+//        } else {
+//            println("Not level One")
+//        }
+        
         generateDotsForLevel(currentLevel)
         gamePhysicsNode.debugDraw = false
         
@@ -43,11 +61,13 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
     
     //Has the range of levels and uses loadGridWithCode to put in to number of the distance apart and totalNumberOfBlackDots
     func generateDotsForLevel(levelNum: Int) {
-       // currentLevel = 31
         
         if currentLevel >= 1 && currentLevel <= 10 {
             loadGridWithCode(2, totalNumberOfBlackDots: 6)
-    randomWinBoxPlace()
+            //gamePhysicsNode.addChild(ball)
+            
+            randomWinBoxPlace()
+          
             println("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
             
         } else if currentLevel >= 11 && currentLevel <= 20 {
@@ -57,7 +77,7 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
             loadGridWithCode(2, totalNumberOfBlackDots: 15)
              println("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
             
-        } else if currentLevel ==  30 {
+        } else if currentLevel ==  31 {
             let load = CCBReader.loadAsScene("winScreenB")
             CCDirector.sharedDirector().presentScene(load)
         } else {
@@ -126,39 +146,59 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
     
     //Retry is not wroking
     func retry() {
+        //generateDotsForLevel(currentLevel)
     let backScene = CCBReader.loadAsScene("GridScene")
     CCDirector.sharedDirector().presentScene(backScene)
 
       generateDotsForLevel(currentLevel)
-      ball.position = CGPoint(x: 156, y: 533)
         
     }
     
    
     //ccPhysicsCollisionBegin when the collides with the win box
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, ballCollision: CCNode!, win: CCNode!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, ballCollision: CCNode!, win: CCNode!) -> ObjCBool {
         
-        currentLevel++
+      currentLevel++
+//        onEnter(dot.removeAllChildrenWithCleanup(true))
+
         
+//        self.dot.removeAllChildrenWithCleanup(true)
+//        self.winBox.removeAllChildrenWithCleanup(true)
+//        self.ball.removeAllChildrenWithCleanup(true)
+//        
+//       self.BlackDot.removeAllChildrenWithCleanup(true)
+
+        //removeAllChildrenWithCleanup(true)
         let backScene = CCBReader.loadAsScene("GridScene")
         CCDirector.sharedDirector().presentScene(backScene)
-        levleForLabel++
-        LevelOnScreen.string = String(levleForLabel)
-        generateDotsForLevel(currentLevel)
         
-        ball.position = CGPoint(x: 156, y: 533)
+      
+        
+        generateDotsForLevel(currentLevel)
+
+        
+        
+//        winLayer.visible = true
+        
+        //levleForLabel++
+       // LevelOnScreen.string = String(levleForLabel)
+        
+        
         
         return true
     }
     
-    
-  
-    //Winscreen called in ccPhysicsCollisionBegin
-//    func winthing() {
-//        let winscene = CCBReader.loadAsScene("winScreenB")
-//        CCDirector.sharedDirector().presentScene(winscene)
-//        }
 
+
+
+//class winScreen: GridScene {
+    //weak var winLayer: CCNode!
+    
+    func NextLevel() {
+       //currentLevel++
+        winLayer.visible = false
+    }
+    
 }
 // class full of the extra old code
 class extraStuff: CCNode {
