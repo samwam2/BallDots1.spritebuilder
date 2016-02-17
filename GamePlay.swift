@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Mixpanel
+
 class GamePlay: CCScene, CCPhysicsCollisionDelegate {
     //all vars here
     weak var dot: CCNode!
@@ -20,14 +22,16 @@ class GamePlay: CCScene, CCPhysicsCollisionDelegate {
     var currentLevel: Int = 1
    // var currentLevelPath = "Levels/level\(currentLevel)"
     //all lets here
-    
+    let mixpanel = Mixpanel.sharedInstanceWithToken("78c883b9d8e9f8c5306e60c8b0b72833")
+
 
     func didLoadFromCCB() {
     
         userInteractionEnabled = true
         //gamePhysicsNode.debugDraw = true
         gamePhysicsNode.collisionDelegate = self
-            levelNode.addChild(level)
+        levelNode.addChild(level)
+        mixpanel.track("Played the game")
     }
     
     
@@ -43,12 +47,12 @@ class GamePlay: CCScene, CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionPostSolve(pair: CCPhysicsCollisionPair!, ball: CCNode!, win: CCNode!) {
         currentLevel++
-        println("\(currentLevel)")
+        print("\(currentLevel)")
         whatLevel()
     }
     
     func whatLevel() {
-        var levelLoad: CCScene = CCBReader.loadAsScene("Levels/level\(currentLevel)")
+        let levelLoad: CCScene = CCBReader.loadAsScene("Levels/level\(currentLevel)")
         levelNode.removeChild(level)
         level = levelLoad
         levelNode.addChild(level)

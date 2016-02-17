@@ -68,20 +68,20 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
             
             randomWinBoxPlace()
           
-            println("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
+            print("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
             
         } else if currentLevel >= 11 && currentLevel <= 20 {
             loadGridWithCode(2, totalNumberOfBlackDots: 10)
             
         } else if currentLevel >= 21 && currentLevel <= 30 {
             loadGridWithCode(2, totalNumberOfBlackDots: 15)
-             println("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
+             print("Level 1 - 10 loaded succecsfully, Current level: \(currentLevel)")
             
         } else if currentLevel ==  31 {
             let load = CCBReader.loadAsScene("winScreenB")
             CCDirector.sharedDirector().presentScene(load)
         } else {
-            println("Level Failed to load")
+            print("Level Failed to load")
             
         }
     }
@@ -128,11 +128,11 @@ class GridScene: CCNode, CCPhysicsCollisionDelegate {
 
     // Function for randomly loading the box
     func randomWinBoxPlace() {
-        var winboxB = CCBReader.load("WinBox")
-        var screenSize = CCDirector.sharedDirector().viewSize().width
-        var winboxSize =  winboxB.contentSize.width
-        var math = screenSize - winboxSize
-        var randomNum = arc4random() % UInt32(math)
+        let winboxB = CCBReader.load("WinBox")
+        let screenSize = CCDirector.sharedDirector().viewSize().width
+        let winboxSize =  winboxB.contentSize.width
+        let math = screenSize - winboxSize
+        let randomNum = arc4random() % UInt32(math)
         winboxB.position = ccp(CGFloat(randomNum) ,CGFloat(0))
         gamePhysicsNode.addChild(winboxB)
     }

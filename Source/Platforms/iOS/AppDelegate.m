@@ -28,6 +28,12 @@
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
 
+#import "BallDots-Bridging-Header.h"
+
+#import "Mixpanel.h"
+#define MIXPANEL_TOKEN @"78c883b9d8e9f8c5306e60c8b0b72833"
+
+
 @implementation AppController
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -53,6 +59,16 @@
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
     
     [self setupCocos2dWithOptions:cocos2dSetup];
+    
+    //All 3rd party api's
+    
+    
+        // Mixpanel code
+        [Mixpanel sharedInstanceWithToken:MIXPANEL_TOKEN];
+        Mixpanel *mixpanel = [Mixpanel sharedInstance];
+        [mixpanel track:@"App Loaded"];
+    
+
     
     return YES;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196EED4869E5F8DBAB706DA7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FF57D41FA49323972D5195 /* Pods.framework */; };
 		5B121030197484FA004C1E1D /* BallDotsActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* BallDotsActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A046D7519E84C36004C4763 /* MainScene.swift */; };
@@ -43,6 +44,9 @@
 		7A97910819E62F84001FFC4D /* libcocos2dAndroid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A97910019E62E40001FFC4D /* libcocos2dAndroid.a */; };
 		7A97911719E631C6001FFC4D /* libcocos2d-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A97910419E62E40001FFC4D /* libcocos2d-mac.a */; };
 		7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9790FE19E62E40001FFC4D /* libcocos2d.a */; };
+		8236EA731C5E36E600E3778D /* sudoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8236EA721C5E36E600E3778D /* sudoCode.swift */; };
+		824953241C70149100028688 /* Mixpanel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824953231C70149100028688 /* Mixpanel.framework */; };
+		8291ED821C6A71B8001831E5 /* tutroial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8291ED811C6A71B8001831E5 /* tutroial.swift */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		8F0A569C1B68180600F983E7 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A569B1B68180600F983E7 /* Ball.swift */; };
 		8F25B1741B570DD300AFD208 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25B1731B570DD300AFD208 /* Grid.swift */; };
@@ -175,6 +179,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		322B3DC91D1D1FE01D7BC28D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121011197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -185,6 +190,7 @@
 		5B121033197485FE004C1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platforms/Android/Info.plist; sourceTree = "<group>"; };
 		5B121034197485FE004C1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platforms/iOS/Info.plist; sourceTree = "<group>"; };
 		5BA4619E1974C88900785744 /* AndroidManifest.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = AndroidManifest.xml; path = Platforms/Android/AndroidManifest.xml; sourceTree = "<group>"; };
+		64FF57D41FA49323972D5195 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A046D7519E84C36004C4763 /* MainScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScene.swift; path = Source/MainScene.swift; sourceTree = "<group>"; };
 		7A4035FF19DDEE84007B6E8F /* BallDots Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BallDots Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A40360219DDEE84007B6E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Platforms/Mac/Info.plist; sourceTree = "<group>"; };
@@ -198,6 +204,11 @@
 		7AFCD5DB19E9BD9F00BCCCDA /* cocos2d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cocos2d.h; path = "Source/libs/cocos2d-iphone/cocos2d/cocos2d.h"; sourceTree = "<group>"; };
 		7AFCD5DD19E9BDC200BCCCDA /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Source/Bridging-Header.h"; sourceTree = "<group>"; };
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
+		8236EA721C5E36E600E3778D /* sudoCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sudoCode.swift; sourceTree = "<group>"; };
+		8249531F1C70148A00028688 /* LaunchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchKit.framework; path = "Pods/../build/Debug-iphoneos/LaunchKit.framework"; sourceTree = "<group>"; };
+		824953231C70149100028688 /* Mixpanel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mixpanel.framework; path = "Pods/../build/Debug-iphoneos/Mixpanel.framework"; sourceTree = "<group>"; };
+		824953251C70186A00028688 /* BallDots-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BallDots-Bridging-Header.h"; sourceTree = "<group>"; };
+		8291ED811C6A71B8001831E5 /* tutroial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutroial.swift; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		8F0A569B1B68180600F983E7 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 		8F25B1731B570DD300AFD208 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
@@ -255,6 +266,7 @@
 		BC5399D61A44DCC90063F482 /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../Library/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		BC5399D71A44DCC90063F482 /* JavaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaKit.framework; path = "../../../../Library/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaKit.framework"; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
+		E7188D77F1D9B8E76455578F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824953241C70149100028688 /* Mixpanel.framework in Frameworks */,
 				8FD408151B788E51007F97EB /* GameKit.framework in Frameworks */,
 				7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
@@ -310,12 +323,22 @@
 				B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */,
 				B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */,
 				B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */,
+				196EED4869E5F8DBAB706DA7 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0854447249F609E04BEF0017 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7188D77F1D9B8E76455578F /* Pods.debug.xcconfig */,
+				322B3DC91D1D1FE01D7BC28D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5B12100D197483EE004C1E1D /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,8 +532,11 @@
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				8F2943781B696ACE0085A312 /* GridScene.swift */,
+				8236EA721C5E36E600E3778D /* sudoCode.swift */,
 				8F0A569B1B68180600F983E7 /* Ball.swift */,
 				8FF08EDB1B62E80900DDB0C5 /* winScreenB.swift */,
+				8291ED811C6A71B8001831E5 /* tutroial.swift */,
+				824953251C70186A00028688 /* BallDots-Bridging-Header.h */,
 				8F801D351B78919500411DEB /* GameCenter.swift */,
 				8F6DD6FC1B55D6E900D9BDBD /* GamePlay.swift */,
 				8F25B1731B570DD300AFD208 /* Grid.swift */,
@@ -556,6 +582,7 @@
 				8FD408041B788D8F007F97EB /* demoShare */,
 				B77F1B3017B978D7009739AE /* Frameworks */,
 				B77F1B2F17B978D7009739AE /* Products */,
+				0854447249F609E04BEF0017 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -572,6 +599,8 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				824953231C70149100028688 /* Mixpanel.framework */,
+				8249531F1C70148A00028688 /* LaunchKit.framework */,
 				8FD408141B788E51007F97EB /* GameKit.framework */,
 				BC5399D31A44DCC90063F482 /* AndroidKit.framework */,
 				BC5399D41A44DCC90063F482 /* CoreJava.framework */,
@@ -594,6 +623,7 @@
 				B77F1B3D17B978D7009739AE /* Foundation.framework */,
 				B77F1B3F17B978D7009739AE /* CoreGraphics.framework */,
 				B77F1B4117B978D7009739AE /* CoreText.framework */,
+				64FF57D41FA49323972D5195 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -666,12 +696,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "BallDots iOS" */;
 			buildPhases = (
+				CC6B3DBC7656B0BA504AE697 /* Check Pods Manifest.lock */,
 				D2E0167A18D782EC00927430 /* Run Script */,
 				B77F1B2A17B978D7009739AE /* Sources */,
 				B77F1B2B17B978D7009739AE /* Frameworks */,
 				D352B47A19EC5D8A00829775 /* Compile Metal Shaders */,
 				B77F1B2C17B978D7009739AE /* Resources */,
 				8FD4080D1B788D8F007F97EB /* Embed App Extensions */,
+				4455508A438B03CC2EDB0288 /* Embed Pods Frameworks */,
+				9E52EEF0A0B68A027BE5872B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -689,6 +722,8 @@
 		B77F1B2617B978D7009739AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
@@ -834,6 +869,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4455508A438B03CC2EDB0288 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		927F619B196C771E000F43EF /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -847,6 +897,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "osascript -e 'tell application \"System Events\"' -e 'set ProcessList to name of every process' -e 'if \"SpriteBuilder\" is in ProcessList then' -e 'tell application \"SpriteBuilder\" to publish' -e 'end if' -e 'end tell'";
+		};
+		9E52EEF0A0B68A027BE5872B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC6B3DBC7656B0BA504AE697 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		D2E0167A18D782EC00927430 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -903,6 +983,7 @@
 			files = (
 				B73789871807631A0076A88C /* main.m in Sources */,
 				8F7AED191B61AA2D008A80F6 /* LevelScene.swift in Sources */,
+				8291ED821C6A71B8001831E5 /* tutroial.swift in Sources */,
 				8F6DD6FD1B55D6E900D9BDBD /* GamePlay.swift in Sources */,
 				8FD85A431B60159C00CE5F66 /* AboutGame.swift in Sources */,
 				8FF08EDC1B62E80900DDB0C5 /* winScreenB.swift in Sources */,
@@ -916,6 +997,7 @@
 				8F0A569C1B68180600F983E7 /* Ball.swift in Sources */,
 				8F25B1761B58578500AFD208 /* Dot.swift in Sources */,
 				8FF08EDE1B62F06E00DDB0C5 /* blackDot.swift in Sources */,
+				8236EA731C5E36E600E3778D /* sudoCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,6 +1278,7 @@
 		};
 		B77F1CDF17B978D8009739AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7188D77F1D9B8E76455578F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1205,7 +1288,55 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Source/Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"\"Source/libs/cocos2d-iphone/cocos2d\"/**",
+					"Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include",
+					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
+					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
+					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
+				);
+				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lz",
+					"-ObjC",
+				);
+				PRODUCT_NAME = BallDots;
+				PROVISIONING_PROFILE = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BallDots-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B77F1CE017B978D8009739AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322B3DC91D1D1FE01D7BC28D /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
@@ -1225,43 +1356,9 @@
 				);
 				PRODUCT_NAME = BallDots;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		B77F1CE017B978D8009739AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Source/Prefix.pch;
-				HEADER_SEARCH_PATHS = (
-					"\"Source/libs/cocos2d-iphone/cocos2d\"/**",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include",
-					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
-					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
-					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
-				);
-				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-lz",
-					"-ObjC",
-				);
-				PRODUCT_NAME = BallDots;
-				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BallDots-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

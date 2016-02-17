@@ -23,12 +23,14 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate { //, GKGameCenterController
         userInteractionEnabled = true
         gamePhysicsNode.collisionDelegate = self
         setUpGameCenter()
-        
+      
+ 
     }
-    func setUpGameCenter() { let gameCenterInteractor = GameCenterInteractor.sharedInstance; gameCenterInteractor.authenticationCheck()
+    func setUpGameCenter() {
+        let gameCenterInteractor = GameCenterInteractor.sharedInstance; gameCenterInteractor.authenticationCheck()
     
     }
-    
+    // All button funcs
     func openGameCenter() {
         showLeaderboard()
     }
@@ -43,6 +45,11 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate { //, GKGameCenterController
         CCDirector.sharedDirector().presentScene(aboutthegameScene)
     
     }
+    func tutButton() {
+        let tutScene = CCBReader.loadAsScene("tutroial")
+        CCDirector.sharedDirector().presentScene(tutScene)
+        
+    }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, ballCollision: CCNode!, resetBall: CCNodeColor!) -> ObjCBool {
         ball.position = CGPoint(x: 157, y: 591)
@@ -51,30 +58,30 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate { //, GKGameCenterController
     
    // All share button code
     func shareButtonTapped() {
-        var scene = CCDirector.sharedDirector().runningScene
-        var n: AnyObject = scene.children[0]
-        var image = screenShotWithStartNode(n as! CCNode)
+        let scene = CCDirector.sharedDirector().runningScene
+        let n: AnyObject = scene.children[0]
+        let image = screenShotWithStartNode(n as! CCNode)
         let sharedText = "Come Play The Dot Challenge, http://tinyurl.com/balldots"
         let itemsToShare = [image, sharedText]
-        var excludedActivities = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard,
+        let excludedActivities = [UIActivityTypePrint, UIActivityTypeCopyToPasteboard,
             UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll,
             UIActivityTypeAddToReadingList, UIActivityTypePostToTencentWeibo,UIActivityTypeAirDrop]
-        var controller = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
+        let controller = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
         controller.excludedActivityTypes = excludedActivities
         UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(controller, animated: true, completion: nil)
     }
     
     func screenShotWithStartNode(node: CCNode) -> UIImage {
         CCDirector.sharedDirector().nextDeltaTimeZero = true
-        var viewSize = CCDirector.sharedDirector().viewSize()
-        var rtx = CCRenderTexture(width: Int32(viewSize.width), height: Int32(viewSize.height))
+        let viewSize = CCDirector.sharedDirector().viewSize()
+        let rtx = CCRenderTexture(width: Int32(viewSize.width), height: Int32(viewSize.height))
         rtx.begin()
         node.visit()
         rtx.end()
         return rtx.getUIImage()
     }
 
-    
+ 
    
     
     
@@ -86,14 +93,14 @@ class MainScene: CCNode, CCPhysicsCollisionDelegate { //, GKGameCenterController
 
 extension MainScene: GKGameCenterControllerDelegate {
     func showLeaderboard() {
-        var viewController = CCDirector.sharedDirector().parentViewController!
-        var gameCenterViewController = GKGameCenterViewController()
+        let viewController = CCDirector.sharedDirector().parentViewController!
+        let gameCenterViewController = GKGameCenterViewController()
         gameCenterViewController.gameCenterDelegate = self
         viewController.presentViewController(gameCenterViewController, animated: true, completion: nil)
     }
     
     // Delegate methods
-    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController!) {
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
     }
 }

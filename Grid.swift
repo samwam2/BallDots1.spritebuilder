@@ -47,7 +47,7 @@ class Grid: CCNode {
         for row in 0..<self.rows {
             grid.append([])
             for column in 0..<self.columns{
-                var point = GridPoint(x: CGFloat(row * spacing), y: CGFloat(column * spacing), isBlackDot: false)
+                let point = GridPoint(x: CGFloat(row * spacing), y: CGFloat(column * spacing), isBlackDot: false)
                 grid[row].append(point)
             }
         }

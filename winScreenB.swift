@@ -7,40 +7,27 @@
 //
 
 import Foundation
+import Mixpanel
 
 class winScreenB: CCNode { // CCNode
     
-    var SceneGrid = CCBReader.load("GridScene") as! GridScene
-//    func Next() {
-//        var currentLevelWin = SceneGrid.currentLevel
-//        
-////        let nextscreenScene = CCBReader.loadAsScene("GridScene\(currentLevelWin)")
-////        CCDirector.sharedDirector().presentScene(nextscreenScene)
-//        
-//    }
+//    var SceneGrid = CCBReader.load("GridScene") as! GridScene
+    let mixpanel = Mixpanel.sharedInstanceWithToken("78c883b9d8e9f8c5306e60c8b0b72833")
+
+    
+    func didLoadFromCCB() {
+        userInteractionEnabled = true
+        mixpanel.track("Went to winScreenB ")
+        
+    }
     
     func Next() {
         let nextScene = CCBReader.loadAsScene("MainScene")
         CCDirector.sharedDirector().presentScene(nextScene)
     }
     
-    func nextLevel() {
-        var currentLevel: NSInteger = SceneGrid.currentLevel
-       // var generateDotsForLevel = SceneGrid.generateDotsForLevel(currentLevel)
-      
-//        SceneGrid.currentLevel.advancedBy(1)
-       let nextLevelScene = CCBReader.loadAsScene("GridScene")//.currentLevell
-        CCDirector.sharedDirector().presentScene(nextLevelScene)
-        SceneGrid.generateDotsForLevel(currentLevel)
-        
-    }
+
     
     
-    
-//    func nextLevel() {
-//        
-//        for  levelOne in 1...5 {
-//            CCBReader.loadAsScene("Level/levelTwo")
-//        }
-//    }
+
 }
